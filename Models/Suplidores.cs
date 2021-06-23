@@ -14,7 +14,6 @@ namespace RegistroPedidosBlazor.Models
 
         public string Nombres { get; set; }
 
-        [ForeignKey("SuplidorID")]
-        public virtual List<Ordenes> Ordenes { get; set; }
+        public List<Ordenes> Ordenes { get; set; } = new List<Ordenes>();
     }
 }
