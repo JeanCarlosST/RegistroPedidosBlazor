@@ -98,6 +98,7 @@ namespace RegistroPedidosBlazor.BLL
             {
                 suplidor = contexto.Suplidores
                     .Where(s => s.SuplidorID == id)
+                    .Include(s => s.Ordenes)
                     .SingleOrDefault();
             }
             catch

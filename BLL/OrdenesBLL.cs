@@ -141,6 +141,7 @@ namespace RegistroPedidosBlazor.BLL
             try
             {
                 orden = contexto.Ordenes
+                    .Include(o => o.Suplidor)
                     .Include(o => o.Detalle)
                     .Where(o => o.OrdenID == id)
                     .SingleOrDefault();
